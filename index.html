@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit Kaushal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .glass {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .skill-logo {
+      transition: transform 0.3s ease;
+    }
+
+    .skill-logo:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-orange-50 to-green-50 text-gray-800 
+             dark:from-gray-900 dark:via-slate-950 dark:to-black dark:text-gray-100">
+
+
+  <!-- Particles Background -->
+  <div id="tsparticles"></div>
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 glass fixed w-full z-50">
+    <h1 class="text-xl font-bold tracking-wide">Rohit Kaushal</h1>
+    <div class="space-x-6 hidden md:block">
+      <a href="#home" class="hover:text-indigo-500">Home</a>
+      <a href="#about" class="hover:text-indigo-500">About Me</a>
+      <a href="#experience" class="hover:text-indigo-500">Experience</a>
+      <a href="#skills" class="hover:text-indigo-500">Skills</a>
+      <a href="#projects" class="hover:text-indigo-500">Projects</a>
+      <a href="#contact" class="hover:text-indigo-500">Contact</a>
+    </div>
+    <button id="theme-toggle" class="p-2 rounded-full bg-white/70 dark:bg-gray-700 hover:scale-110 transition">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="text-center pt-40 pb-24 relative z-10">
+    <h1
+      class="text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-500 via-emerald-500 to-sky-500 text-transparent bg-clip-text">
+      Rohit Kaushal
+    </h1>
+    <p class="text-lg max-w-2xl mx-auto mb-10 text-gray-700 dark:text-gray-300">
+      Software Engineer building robust, scalable systems — from backend APIs to full-stack
+      applications, data pipelines, and automation.
+    </p>
+    <div class="flex justify-center gap-4">
+      <a href="mailto:shimokirichi@gmail.com" class="glass px-4 py-2 rounded-xl">📧 Contact</a>
+      <a href="https://github.com" class="glass px-4 py-2 rounded-xl">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/iamrohitkaushal/" class="glass px-4 py-2 rounded-xl">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20">
+    <h2 class="text-3xl font-bold text-center mb-14">About Me</h2>
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+      <!-- Picture -->
+      <div class="flex-shrink-0">
+        <!-- Load rohit-red file from same directory as index.html -->
+        <img src="rohit-red.jpg" alt="Rohit Kaushal"
+          class="w-60 h-60 object-cover rounded-3xl shadow-lg border-4 border-white/20 dark:border-gray-700/40 transition" />
+      </div>
+
+      <!-- Introduction -->
+      <div class="glass p-8 rounded-2xl shadow-lg flex-1">
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Hi! I'm <strong>Rohit</strong>, a software engineer with over
+          <span id="experience-years" class="font-bold text-green-500 relative group cursor-help">
+            0 years
+            <span
+              class="tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white dark:bg-gray-100 dark:text-gray-900 whitespace-nowrap max-w-xs text-center">
+              0 years, 0 months, 0 days
+            </span>
+          </span>
+          of experience building robust and scalable systems from scratch to delivery.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          I enjoy solving challenging problems, designing efficient architectures, and working across the full stack —
+          from backend APIs and batch processing to modern web frontends. I also love automating processes and
+          optimizing systems for performance.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300">
+          Outside of work, I enjoy exploring new technologies, contributing to open-source projects, and learning about
+          energy systems and sustainable tech. I'm passionate about creating software that truly makes an impact.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Experience -->
+  <section id="experience"
+    class="py-20 bg-gradient-to-br from-indigo-50 via-slate-100 to-white dark:from-slate-900 dark:via-gray-800 dark:to-black">
+    <h2 class="text-3xl font-bold text-center mb-14">Experience</h2>
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="glass p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Market Research Company</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Built a <strong>real-time survey platform</strong> that delivered 100k+ responses weekly, aggregating and
+          sharing insights with clients at scale.
+        </p>
+      </div>
+      <div class="glass p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Electricity Market Domain</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Developed <strong>real-time grid stability software</strong>, connecting control mechanisms with assets to
+          ensure reliable power distribution.
+        </p>
+      </div>
+      <div class="glass p-6 rounded-2xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Engineering Contributions</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Migrated legacy Java backend to modern <strong>Kotlin-based APIs</strong>, built TypeScript BFFs, React
+          frontends, automated CI/CD pipelines, and contributed Python data aggregation scripts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
+    <h2 class="text-3xl font-bold text-center mb-14">Skills</h2>
+
+    <div class="max-w-6xl mx-auto space-y-14">
+
+      <!-- Languages -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Languages</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+              class="w-12 h-12 skill-logo" alt="C++" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">C++</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              class="w-12 h-12 skill-logo" alt="Python" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Python</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              class="w-12 h-12 skill-logo" alt="PHP" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PHP</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+              class="w-12 h-12 skill-logo" alt="Kotlin" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Kotlin</span>
+          </div>
+          <!-- Add TypeScript -->
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              class="w-12 h-12 skill-logo" alt="TypeScript" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">TypeScript</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              class="w-12 h-12 skill-logo" alt="JavaScript" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Tools -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Web Development Tools</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              class="w-12 h-12 skill-logo" alt="React" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">React.js</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+              class="w-12 h-12 skill-logo" alt="Next.js" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Next.js</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+              class="w-12 h-12 skill-logo" alt="JQuery" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">jQuery</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              class="w-12 h-12 skill-logo" alt="HTML5" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">HTML5</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              class="w-12 h-12 skill-logo" alt="CSS3" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">CSS3</span>
+          </div>
+          <div class="relative group">
+            <!-- Add some glow to the locked skill so that it should stand out -->
+            <!-- Make the border corner soft by setting radius -->
+            <img src="https://img.icons8.com/ios-filled/50/lock-2.png"
+              class="w-12 h-12 skill-logo border-2 border-gray-800 opacity-25 shadow-lg rounded-lg"
+              alt="Locked Skill" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Locked</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Databases</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              class="w-12 h-12 skill-logo" alt="MySQL" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">MySQL</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              class="w-12 h-12 skill-logo" alt="PostgreSQL" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PostgreSQL</span>
+          </div>
+          <div class="relative group">
+            <img
+              src="https://cdn.brandfetch.io/idSUrLOWbH/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668081624532"
+              class="w-12 h-12 skill-logo" alt="Databricks" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Databricks</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+              class="w-12 h-12 skill-logo" alt="Redis" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Redis</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg"
+              class="w-12 h-12 skill-logo" alt="DynamoDB" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">DynamoDB</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+              class="w-12 h-12 skill-logo" alt="Jupyter" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jupyter</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Cloud & Infra</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+              class="w-12 h-12 skill-logo skill-logo" alt="AWS" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+              AWS
+            </span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+              class="w-12 h-12 skill-logo" alt="Terraform" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Terraform</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              class="w-12 h-12 skill-logo" alt="Docker" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Version Control & CI/CD -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Version Control & CI/CD</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              class="w-12 h-12 skill-logo" alt="Git" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Git</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              class="w-12 h-12 skill-logo" alt="GitHub Actions" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">GitHub
+              Actions</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+              class="w-12 h-12 skill-logo" alt="Jenkins" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jenkins</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Tools -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 text-center">Automation, Testing & More...</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"
+              class="w-12 h-12 skill-logo" alt="Selenium" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Selenium</span>
+          </div>
+          <div class="relative group">
+            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-12 h-12 skill-logo"
+              alt="Postman" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Postman</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+              class="w-12 h-12 skill-logo" alt="Jest" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jest</span>
+          </div>
+          <div class="relative group">
+            <img src="https://vitest.dev/logo.svg" class="w-12 h-12 skill-logo" alt="Vitest" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Vitest</span>
+          </div>
+          <div class="relative group">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+              class="w-12 h-12 skill-logo" alt="Bash Scripts" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Bash</span>
+          </div>
+          <div class="relative group">
+            <img
+              src="https://cdn.brandfetch.io/idpA_urmHL/w/360/h/360/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1751392305778"
+              class="w-12 h-12 skill-logo" alt="PagerDuty" />
+            <span
+              class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PagerDuty</span>
+          </div>
+        </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <h2 class="text-3xl font-bold text-center mb-14">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div class="glass p-8 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-3">Real-time Survey Platform</h3>
+        <p class="mb-4 text-gray-700 dark:text-gray-300">A large-scale platform delivering and aggregating 100k+ survey
+          responses weekly for market research clients.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="glass px-3 py-1 rounded-full">Java</span>
+          <span class="glass px-3 py-1 rounded-full">Kotlin</span>
+          <span class="glass px-3 py-1 rounded-full">TypeScript</span>
+          <span class="glass px-3 py-1 rounded-full">React</span>
+          <span class="glass px-3 py-1 rounded-full">Node.js</span>
+        </div>
+      </div>
+      <div class="glass p-8 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-3">Electricity Grid Stability System</h3>
+        <p class="mb-4 text-gray-700 dark:text-gray-300">Software that connects grid control mechanisms with stabilizing
+          assets in real-time, ensuring reliability.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="glass px-3 py-1 rounded-full">Kotlin</span>
+          <span class="glass px-3 py-1 rounded-full">TypeScript</span>
+          <span class="glass px-3 py-1 rounded-full">Node.js</span>
+          <span class="glass px-3 py-1 rounded-full">React</span>
+        </div>
+      </div>
+      <div class="glass p-8 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-3">Data Aggregation Pipelines</h3>
+        <p class="mb-4 text-gray-700 dark:text-gray-300">Python batch scripts and automated pipelines to process and
+          aggregate millions of records efficiently.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="glass px-3 py-1 rounded-full">Python</span>
+          <span class="glass px-3 py-1 rounded-full">Pandas</span>
+          <span class="glass px-3 py-1 rounded-full">CI/CD</span>
+        </div>
+      </div>
+      <div class="glass p-8 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-3">DevOps Automation</h3>
+        <p class="mb-4 text-gray-700 dark:text-gray-300">Designed CI/CD pipelines to streamline deployments and
+          automated infrastructure provisioning.</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="glass px-3 py-1 rounded-full">GitHub Actions</span>
+          <span class="glass px-3 py-1 rounded-full">Docker</span>
+          <span class="glass px-3 py-1 rounded-full">Kubernetes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gradient-to-r from-slate-200 to-stone-200 dark:from-gray-800 dark:to-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+    <p class="text-center mb-6">Feel free to reach out via email or connect with me on GitHub/LinkedIn.</p>
+    <div class="flex justify-center gap-4">
+      <a href="mailto:shimokirichi@gmail.com" class="glass px-4 py-2 rounded-xl">📧 Email</a>
+      <a href="https://github.com" class="glass px-4 py-2 rounded-xl">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/iamrohitkaushal/" class="glass px-4 py-2 rounded-xl">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8">
+    <p class="text-sm">© <span id="year"></span> Rohit Kaushal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      icon.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Particles config
+    tsParticles.load("tsparticles", {
+      background: { color: "transparent" },
+      fpsLimit: 60,
+      particles: {
+        color: { value: ["#a5b4fc", "#6ee7b7", "#93c5fd"] },
+        move: { enable: true, speed: 0.6 },
+        number: { value: 40 },
+        opacity: { value: 0.6 },
+        size: { value: { min: 1, max: 3 } },
+      },
+      detectRetina: true,
+    });
+  </script>
+
+  <script>
+    // Adjust this date to John's career start
+    const startDate = new Date('2020-05-05');
+
+    function updateExperience() {
+      const now = new Date();
+      let years = now.getFullYear() - startDate.getFullYear();
+      let months = now.getMonth() - startDate.getMonth();
+      let days = now.getDate() - startDate.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+      }
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      const shortText = `${years} year${years !== 1 ? 's' : ''}`;
+      const fullText = `${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}, ${days} day${days !== 1 ? 's' : ''}`;
+
+      const expSpan = document.getElementById('experience-years');
+      expSpan.childNodes[0].nodeValue = shortText;
+      expSpan.querySelector('.tooltip').textContent = fullText;
+    }
+
+    updateExperience();
+  </script>
+
+</body>
+
+</html>
