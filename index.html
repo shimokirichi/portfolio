@@ -5,11 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohit Kaushal Portfolio</title>
+  
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdn.brandfetch.io" crossorigin />
+  <link rel="dns-prefetch" href="https://img.icons8.com" />
+  <link rel="dns-prefetch" href="https://www.vectorlogo.zone" />
+  <link rel="dns-prefetch" href="https://vitest.dev" />
+  
+  <!-- Tailwind CSS - Must load synchronously to process HTML classes -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <script>
     tailwind.config = { darkMode: 'class' }
   </script>
+  
+  <!-- TSParticles - Load after page is interactive (lazy loaded) -->
+  <!-- Will be loaded via JavaScript after page load -->
   <style>
     body {
       transition: background-color 0.5s, color 0.5s;
@@ -62,6 +74,7 @@
       <a href="#experience" class="hover:text-indigo-500">Experience</a>
       <a href="#skills" class="hover:text-indigo-500">Skills</a>
       <a href="#projects" class="hover:text-indigo-500">Projects</a>
+      <a href="#game" class="hover:text-indigo-500">Game</a>
       <a href="#contact" class="hover:text-indigo-500">Contact</a>
     </div>
     <button id="theme-toggle" class="p-2 rounded-full bg-white/70 dark:bg-gray-700 hover:scale-110 transition">
@@ -81,7 +94,7 @@
     </p>
     <div class="flex justify-center gap-4">
       <a href="mailto:shimokirichi@gmail.com" class="glass px-4 py-2 rounded-xl">📧 Contact</a>
-      <a href="https://github.com" class="glass px-4 py-2 rounded-xl">💻 GitHub</a>
+      <a href="https://github.com/shimokirichi" class="glass px-4 py-2 rounded-xl">💻 GitHub</a>
       <a href="https://www.linkedin.com/in/iamrohitkaushal/" class="glass px-4 py-2 rounded-xl">🔗 LinkedIn</a>
     </div>
   </section>
@@ -95,7 +108,8 @@
       <div class="flex-shrink-0">
         <!-- Load rohit-red file from same directory as index.html -->
         <img src="rohit-red.jpg" alt="Rohit Kaushal"
-          class="w-60 h-60 object-cover rounded-3xl shadow-lg border-4 border-white/20 dark:border-gray-700/40 transition" />
+          class="w-60 h-60 object-cover rounded-3xl shadow-lg border-4 border-white/20 dark:border-gray-700/40 transition"
+          fetchpriority="high" width="240" height="240" />
       </div>
 
       <!-- Introduction -->
@@ -179,38 +193,38 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-              class="w-12 h-12 skill-logo" alt="C++" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="C++" loading="lazy" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">C++</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              class="w-12 h-12 skill-logo" alt="Python" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Python" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Python</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-              class="w-12 h-12 skill-logo" alt="PHP" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="PHP" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PHP</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-              class="w-12 h-12 skill-logo" alt="Kotlin" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Kotlin" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Kotlin</span>
           </div>
           <!-- Add TypeScript -->
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-              class="w-12 h-12 skill-logo" alt="TypeScript" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="TypeScript" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">TypeScript</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              class="w-12 h-12 skill-logo" alt="JavaScript" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="JavaScript" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">JavaScript</span>
           </div>
@@ -223,31 +237,31 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-              class="w-12 h-12 skill-logo" alt="React" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="React" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">React.js</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-              class="w-12 h-12 skill-logo" alt="Next.js" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Next.js" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Next.js</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
-              class="w-12 h-12 skill-logo" alt="JQuery" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="JQuery" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">jQuery</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              class="w-12 h-12 skill-logo" alt="HTML5" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="HTML5" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">HTML5</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              class="w-12 h-12 skill-logo" alt="CSS3" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="CSS3" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">CSS3</span>
           </div>
@@ -256,7 +270,7 @@
             <!-- Make the border corner soft by setting radius -->
             <img src="https://img.icons8.com/ios-filled/50/lock-2.png"
               class="w-12 h-12 skill-logo border-2 border-gray-800 opacity-25 shadow-lg rounded-lg"
-              alt="Locked Skill" />
+              alt="Locked Skill" loading="lazy" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Locked</span>
           </div>
@@ -269,38 +283,38 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-              class="w-12 h-12 skill-logo" alt="MySQL" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="MySQL" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">MySQL</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-              class="w-12 h-12 skill-logo" alt="PostgreSQL" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="PostgreSQL" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PostgreSQL</span>
           </div>
           <div class="relative group">
             <img
               src="https://cdn.brandfetch.io/idSUrLOWbH/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668081624532"
-              class="w-12 h-12 skill-logo" alt="Databricks" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Databricks" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Databricks</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-              class="w-12 h-12 skill-logo" alt="Redis" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Redis" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Redis</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg"
-              class="w-12 h-12 skill-logo" alt="DynamoDB" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="DynamoDB" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">DynamoDB</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
-              class="w-12 h-12 skill-logo" alt="Jupyter" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Jupyter" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jupyter</span>
           </div>
@@ -314,7 +328,7 @@
           <div class="relative group">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-              class="w-12 h-12 skill-logo skill-logo" alt="AWS" />
+              class="w-12 h-12 skill-logo skill-logo" alt="AWS" loading="lazy" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
               AWS
@@ -322,13 +336,13 @@
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
-              class="w-12 h-12 skill-logo" alt="Terraform" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Terraform" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Terraform</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-              class="w-12 h-12 skill-logo" alt="Docker" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Docker" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Docker</span>
           </div>
@@ -341,20 +355,20 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-              class="w-12 h-12 skill-logo" alt="Git" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Git" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Git</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-              class="w-12 h-12 skill-logo" alt="GitHub Actions" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="GitHub Actions" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">GitHub
               Actions</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
-              class="w-12 h-12 skill-logo" alt="Jenkins" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Jenkins" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jenkins</span>
           </div>
@@ -367,37 +381,37 @@
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center">
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"
-              class="w-12 h-12 skill-logo" alt="Selenium" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Selenium" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Selenium</span>
           </div>
           <div class="relative group">
             <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-12 h-12 skill-logo"
-              alt="Postman" />
+              alt="Postman" loading="lazy" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Postman</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
-              class="w-12 h-12 skill-logo" alt="Jest" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Jest" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Jest</span>
           </div>
           <div class="relative group">
-            <img src="https://vitest.dev/logo.svg" class="w-12 h-12 skill-logo" alt="Vitest" />
+            <img src="https://vitest.dev/logo.svg" class="w-12 h-12 skill-logo" alt="Vitest" loading="lazy" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Vitest</span>
           </div>
           <div class="relative group">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
-              class="w-12 h-12 skill-logo" alt="Bash Scripts" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="Bash Scripts" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">Bash</span>
           </div>
           <div class="relative group">
             <img
               src="https://cdn.brandfetch.io/idpA_urmHL/w/360/h/360/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1751392305778"
-              class="w-12 h-12 skill-logo" alt="PagerDuty" />
+              class="w-12 h-12 skill-logo" loading="lazy" alt="PagerDuty" />
             <span
               class="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">PagerDuty</span>
           </div>
@@ -415,7 +429,7 @@
       <div class="glass p-8 rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition">
         <h3 class="text-xl font-semibold mb-3">AI Recruit
           <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" class="w-6 h-6 float-right mt-1"
-            alt="GitHub" />
+            alt="GitHub" loading="lazy" />
         </h3>
         <p class="mb-4 text-gray-700 dark:text-gray-300">
           An AI powered Recruiting tool that reads the candidate resume PDF and compares it to Job Description and Requirements to identify Pros, Cons, Percentage Match and Questions to ask in interview.
@@ -475,6 +489,115 @@
   </div>
 </section>
 
+  <!-- Game Section -->
+  <section id="game" class="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 dark:from-gray-900 dark:via-slate-950 dark:to-black">
+    <h2 class="text-3xl font-bold text-center mb-8">Snake Game</h2>
+    <p class="text-center mb-6 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+      Take a break and play a quick game of Snake! Use arrow keys or WASD to control the snake. 
+      Eat the food to grow and increase your score. Try to beat your high score!
+    </p>
+    
+    <div class="max-w-2xl mx-auto">
+      <!-- Start Button Container -->
+      <div id="game-start-container" class="text-center mb-6">
+        <!-- Difficulty Selection -->
+        <div class="mb-6">
+          <p class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Select Difficulty:</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button class="difficulty-btn glass px-6 py-3 rounded-xl font-semibold hover:scale-105 transition transform" data-difficulty="easy">
+              Easy
+            </button>
+            <button class="difficulty-btn glass px-6 py-3 rounded-xl font-semibold hover:scale-105 transition transform" data-difficulty="challenge">
+              Challenge
+            </button>
+            <button class="difficulty-btn glass px-6 py-3 rounded-xl font-semibold hover:scale-105 transition transform" data-difficulty="impossible">
+              You just Can't
+            </button>
+          </div>
+        </div>
+        <button id="start-game-btn" class="glass px-8 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition transform disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+          🎮 Start Game
+        </button>
+        <p id="selected-difficulty-text" class="mt-3 text-sm text-gray-600 dark:text-gray-400"></p>
+      </div>
+
+      <!-- Game Container (hidden initially) -->
+      <div id="game-container" class="hidden">
+        <div class="glass p-6 rounded-2xl shadow-lg">
+          <!-- Score Display -->
+          <div class="flex justify-between items-center mb-4 text-lg">
+            <div>
+              <span class="font-semibold">Score: </span>
+              <span id="current-score" class="text-green-500 dark:text-green-400">0</span>
+            </div>
+            <div>
+              <span class="font-semibold">High Score: </span>
+              <span id="high-score" class="text-indigo-500 dark:text-indigo-400">0</span>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="flex justify-center">
+            <canvas id="game-canvas" class="border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800"></canvas>
+          </div>
+
+          <!-- Mobile Directional Controls (visible only on mobile) -->
+          <div id="mobile-controls" class="md:hidden mt-6 flex justify-center">
+            <div class="relative w-48 h-48">
+              <!-- Up Button -->
+              <button id="btn-up" class="mobile-direction-btn absolute top-0 left-1/2 -translate-x-1/2 glass w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold hover:scale-110 active:scale-95 transition transform">
+                ↑
+              </button>
+              <!-- Left Button -->
+              <button id="btn-left" class="mobile-direction-btn absolute left-0 top-1/2 -translate-y-1/2 glass w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold hover:scale-110 active:scale-95 transition transform">
+                ←
+              </button>
+              <!-- Center (empty space) -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16"></div>
+              <!-- Right Button -->
+              <button id="btn-right" class="mobile-direction-btn absolute right-0 top-1/2 -translate-y-1/2 glass w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold hover:scale-110 active:scale-95 transition transform">
+                →
+              </button>
+              <!-- Down Button -->
+              <button id="btn-down" class="mobile-direction-btn absolute bottom-0 left-1/2 -translate-x-1/2 glass w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold hover:scale-110 active:scale-95 transition transform">
+                ↓
+              </button>
+            </div>
+          </div>
+
+          <!-- Countdown Overlay -->
+          <div id="countdown-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="glass p-8 rounded-2xl text-center">
+              <div id="countdown-text" class="text-8xl font-bold text-indigo-500 dark:text-indigo-400">3</div>
+            </div>
+          </div>
+
+          <!-- Game Over Overlay -->
+          <div id="game-over-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="glass p-8 rounded-2xl text-center max-w-md">
+              <h3 class="text-2xl font-bold mb-4">Game Over!</h3>
+              <p class="text-lg mb-2">Your Score: <span id="final-score" class="text-green-500 dark:text-green-400">0</span></p>
+              <p class="text-lg mb-6">High Score: <span id="final-high-score" class="text-indigo-500 dark:text-indigo-400">0</span></p>
+              <div class="flex gap-4 justify-center">
+                <button id="retry-btn" class="glass px-6 py-3 rounded-xl font-semibold hover:scale-105 transition transform">
+                  🔄 Retry
+                </button>
+                <button id="close-game-btn" class="glass px-6 py-3 rounded-xl font-semibold hover:scale-105 transition transform">
+                  ✖️ Close
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructions -->
+          <div class="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+            <p class="hidden md:block">Use <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">↑</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">↓</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">←</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">→</kbd> or <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">W</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">A</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">S</kbd> <kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">D</kbd> to control</p>
+            <p class="md:hidden">Use the directional buttons below to control the snake</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="py-20 bg-gradient-to-r from-slate-200 to-stone-200 dark:from-gray-800 dark:to-gray-900">
@@ -502,19 +625,45 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Particles config
-    tsParticles.load("tsparticles", {
-      background: { color: "transparent" },
-      fpsLimit: 60,
-      particles: {
-        color: { value: ["#a5b4fc", "#6ee7b7", "#93c5fd"] },
-        move: { enable: true, speed: 0.6 },
-        number: { value: 40 },
-        opacity: { value: 0.6 },
-        size: { value: { min: 1, max: 3 } },
-      },
-      detectRetina: true,
-    });
+    // Load TSParticles lazily after page is interactive
+    function loadParticles() {
+      if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("tsparticles", {
+          background: { color: "transparent" },
+          fpsLimit: 60,
+          particles: {
+            color: { value: ["#a5b4fc", "#6ee7b7", "#93c5fd"] },
+            move: { enable: true, speed: 0.6 },
+            number: { value: 40 },
+            opacity: { value: 0.6 },
+            size: { value: { min: 1, max: 3 } },
+          },
+          detectRetina: true,
+        });
+      } else {
+        // If script hasn't loaded yet, wait a bit and try again
+        setTimeout(loadParticles, 100);
+      }
+    }
+
+    // Load TSParticles script and initialize after page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        // Load TSParticles script dynamically
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js';
+        script.async = true;
+        script.onload = loadParticles;
+        document.head.appendChild(script);
+      });
+    } else {
+      // DOM already loaded
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js';
+      script.async = true;
+      script.onload = loadParticles;
+      document.head.appendChild(script);
+    }
   </script>
 
   <script>
@@ -546,6 +695,405 @@
     }
 
     updateExperience();
+  </script>
+
+  <script>
+    // Snake Game - Only loads when Start Game button is clicked
+    (function() {
+      let gameInitialized = false;
+      let highScore = 0; // Stored in memory, persists until page refresh
+      
+      const canvas = document.getElementById('game-canvas');
+      const ctx = canvas.getContext('2d');
+      const startBtn = document.getElementById('start-game-btn');
+      const startContainer = document.getElementById('game-start-container');
+      const gameContainer = document.getElementById('game-container');
+      const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+      const selectedDifficultyText = document.getElementById('selected-difficulty-text');
+      const countdownOverlay = document.getElementById('countdown-overlay');
+      const btnUp = document.getElementById('btn-up');
+      const btnDown = document.getElementById('btn-down');
+      const btnLeft = document.getElementById('btn-left');
+      const btnRight = document.getElementById('btn-right');
+      const countdownText = document.getElementById('countdown-text');
+      const gameOverOverlay = document.getElementById('game-over-overlay');
+      const retryBtn = document.getElementById('retry-btn');
+      const closeGameBtn = document.getElementById('close-game-btn');
+      const currentScoreEl = document.getElementById('current-score');
+      const highScoreEl = document.getElementById('high-score');
+      const finalScoreEl = document.getElementById('final-score');
+      const finalHighScoreEl = document.getElementById('final-high-score');
+
+      // Game variables
+      let gameLoop = null;
+      let gameState = 'stopped'; // 'stopped', 'playing', 'paused', 'gameover', 'countdown'
+      let snake = [];
+      let direction = { x: 1, y: 0 };
+      let nextDirection = { x: 1, y: 0 };
+      let food = { x: 0, y: 0 };
+      let score = 0;
+      const gridSize = 20;
+      const tileCount = 20;
+      let countdownTimer = null;
+      
+      // Game Speed Configuration - Base speed for Easy difficulty
+      // Lower values = faster snake (e.g., 100ms = very fast)
+      // Higher values = slower snake (e.g., 200ms = slower)
+      const BASE_GAME_SPEED = 150; // Milliseconds between snake moves (Easy level)
+      
+      // Difficulty levels and their speed multipliers
+      const DIFFICULTY_LEVELS = {
+        easy: { name: 'Easy', speed: BASE_GAME_SPEED, multiplier: 1.0 },
+        challenge: { name: 'Challenge', speed: BASE_GAME_SPEED / 1.5, multiplier: 1.5 }, // 50% faster
+        impossible: { name: 'You just Can\'t', speed: BASE_GAME_SPEED / 2, multiplier: 2.0 } // 100% faster
+      };
+      
+      let selectedDifficulty = 'easy'; // Default difficulty
+      let currentGameSpeed = BASE_GAME_SPEED;
+      let lastUpdateTime = 0;
+
+      // Set canvas size
+      function resizeCanvas() {
+        const maxWidth = 400;
+        const size = Math.min(maxWidth, window.innerWidth - 80);
+        canvas.width = size;
+        canvas.height = size;
+      }
+
+      // Initialize difficulty selection immediately
+      function initDifficultySelection() {
+        // Difficulty selection
+        difficultyBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const difficulty = btn.dataset.difficulty;
+            selectDifficulty(difficulty);
+          });
+        });
+        
+        // Set default difficulty
+        selectDifficulty('easy');
+        
+        // Setup mobile controls
+        setupMobileControls();
+      }
+
+      // Initialize game
+      function initGame() {
+        if (gameInitialized) return;
+        gameInitialized = true;
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        startBtn.addEventListener('click', startGame);
+        retryBtn.addEventListener('click', startGame);
+        closeGameBtn.addEventListener('click', closeGame);
+        
+        // Keyboard controls
+        document.addEventListener('keydown', handleKeyPress);
+      }
+
+      function selectDifficulty(difficulty) {
+        selectedDifficulty = difficulty;
+        const level = DIFFICULTY_LEVELS[difficulty];
+        currentGameSpeed = level.speed;
+        
+        // Update button styles
+        difficultyBtns.forEach(btn => {
+          if (btn.dataset.difficulty === difficulty) {
+            btn.classList.add('ring-2', 'ring-indigo-500', 'ring-offset-2');
+            btn.classList.remove('opacity-75');
+          } else {
+            btn.classList.remove('ring-2', 'ring-indigo-500', 'ring-offset-2');
+            btn.classList.add('opacity-75');
+          }
+        });
+        
+        // Enable start button and update text
+        startBtn.disabled = false;
+        selectedDifficultyText.textContent = `Selected: ${level.name} (${level.multiplier}x speed)`;
+      }
+
+      function startGame() {
+        // Hide start button, show game
+        startContainer.classList.add('hidden');
+        gameContainer.classList.remove('hidden');
+        gameOverOverlay.classList.add('hidden');
+        
+        // Reset game state
+        score = 0;
+        snake = [
+          { x: 10, y: 10 }
+        ];
+        direction = { x: 1, y: 0 };
+        nextDirection = { x: 1, y: 0 };
+        
+        // Generate food
+        generateFood();
+        
+        // Update score display
+        updateScore();
+        
+        // Start countdown
+        startCountdown();
+      }
+
+      function startCountdown() {
+        gameState = 'countdown';
+        countdownOverlay.classList.remove('hidden');
+        
+        let count = 3;
+        countdownText.textContent = count;
+        countdownText.classList.add('animate-pulse');
+        
+        countdownTimer = setInterval(() => {
+          count--;
+          if (count > 0) {
+            countdownText.textContent = count;
+          } else if (count === 0) {
+            countdownText.textContent = 'GO!';
+          } else {
+            // Countdown finished, start the game
+            clearInterval(countdownTimer);
+            countdownOverlay.classList.add('hidden');
+            countdownText.classList.remove('animate-pulse');
+            gameState = 'playing';
+            
+            // Start game loop
+            if (gameLoop) cancelAnimationFrame(gameLoop);
+            lastUpdateTime = performance.now();
+            gameLoop = requestAnimationFrame(gameUpdate);
+          }
+        }, 1000);
+      }
+
+      function closeGame() {
+        gameState = 'stopped';
+        if (gameLoop) {
+          cancelAnimationFrame(gameLoop);
+          gameLoop = null;
+        }
+        if (countdownTimer) {
+          clearInterval(countdownTimer);
+          countdownTimer = null;
+        }
+        countdownOverlay.classList.add('hidden');
+        gameOverOverlay.classList.add('hidden');
+        gameContainer.classList.add('hidden');
+        startContainer.classList.remove('hidden');
+      }
+
+      function gameUpdate(currentTime) {
+        if (gameState !== 'playing') return;
+        
+        // Always draw for smooth rendering
+        draw();
+        
+        // Only update game logic at controlled speed
+        if (currentTime - lastUpdateTime >= currentGameSpeed) {
+          // Update direction
+          direction = { ...nextDirection };
+          
+          // Move snake head
+          const head = {
+            x: snake[0].x + direction.x,
+            y: snake[0].y + direction.y
+          };
+          
+          // Check wall collision
+          if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+            gameOver();
+            return;
+          }
+          
+          // Check self collision
+          for (let segment of snake) {
+            if (head.x === segment.x && head.y === segment.y) {
+              gameOver();
+              return;
+            }
+          }
+          
+          snake.unshift(head);
+          
+          // Check food collision
+          if (head.x === food.x && head.y === food.y) {
+            score += 10;
+            updateScore();
+            generateFood();
+          } else {
+            snake.pop();
+          }
+          
+          lastUpdateTime = currentTime;
+        }
+        
+        // Continue loop
+        gameLoop = requestAnimationFrame(gameUpdate);
+      }
+
+      function draw() {
+        // Clear canvas
+        const isDark = document.documentElement.classList.contains('dark');
+        ctx.fillStyle = isDark ? '#1f2937' : '#f3f4f6';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw grid (optional, subtle)
+        ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)';
+        ctx.lineWidth = 1;
+        const cellSize = canvas.width / tileCount;
+        for (let i = 0; i <= tileCount; i++) {
+          ctx.beginPath();
+          ctx.moveTo(i * cellSize, 0);
+          ctx.lineTo(i * cellSize, canvas.height);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(0, i * cellSize);
+          ctx.lineTo(canvas.width, i * cellSize);
+          ctx.stroke();
+        }
+        
+        // Draw snake
+        snake.forEach((segment, index) => {
+          ctx.fillStyle = index === 0 
+            ? (isDark ? '#10b981' : '#059669') // Head color
+            : (isDark ? '#34d399' : '#10b981'); // Body color
+          ctx.fillRect(
+            segment.x * cellSize + 1,
+            segment.y * cellSize + 1,
+            cellSize - 2,
+            cellSize - 2
+          );
+        });
+        
+        // Draw food
+        ctx.fillStyle = isDark ? '#ef4444' : '#dc2626';
+        ctx.beginPath();
+        ctx.arc(
+          food.x * cellSize + cellSize / 2,
+          food.y * cellSize + cellSize / 2,
+          cellSize / 2 - 2,
+          0,
+          2 * Math.PI
+        );
+        ctx.fill();
+      }
+
+      function generateFood() {
+        let newFood;
+        do {
+          newFood = {
+            x: Math.floor(Math.random() * tileCount),
+            y: Math.floor(Math.random() * tileCount)
+          };
+        } while (snake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
+        food = newFood;
+      }
+
+      // Function to change direction (used by both keyboard and mobile buttons)
+      function changeDirection(newDir) {
+        if (gameState !== 'playing') {
+          return;
+        }
+        
+        // Prevent reversing into itself
+        if (direction.x !== -newDir.x && direction.y !== -newDir.y) {
+          nextDirection = newDir;
+        }
+      }
+
+      function handleKeyPress(e) {
+        if (gameState !== 'playing') {
+          // Prevent key presses during countdown
+          e.preventDefault();
+          return;
+        }
+        
+        const key = e.key.toLowerCase();
+        const keyMap = {
+          'arrowup': { x: 0, y: -1 },
+          'arrowdown': { x: 0, y: 1 },
+          'arrowleft': { x: -1, y: 0 },
+          'arrowright': { x: 1, y: 0 },
+          'w': { x: 0, y: -1 },
+          's': { x: 0, y: 1 },
+          'a': { x: -1, y: 0 },
+          'd': { x: 1, y: 0 }
+        };
+        
+        if (keyMap[key]) {
+          changeDirection(keyMap[key]);
+          e.preventDefault();
+        }
+      }
+
+      // Mobile button handlers
+      function setupMobileControls() {
+        btnUp.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 0, y: -1 });
+        });
+        btnUp.addEventListener('click', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 0, y: -1 });
+        });
+
+        btnDown.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 0, y: 1 });
+        });
+        btnDown.addEventListener('click', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 0, y: 1 });
+        });
+
+        btnLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          changeDirection({ x: -1, y: 0 });
+        });
+        btnLeft.addEventListener('click', (e) => {
+          e.preventDefault();
+          changeDirection({ x: -1, y: 0 });
+        });
+
+        btnRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 1, y: 0 });
+        });
+        btnRight.addEventListener('click', (e) => {
+          e.preventDefault();
+          changeDirection({ x: 1, y: 0 });
+        });
+      }
+
+      function updateScore() {
+        currentScoreEl.textContent = score;
+        if (score > highScore) {
+          highScore = score;
+        }
+        highScoreEl.textContent = highScore;
+      }
+
+      function gameOver() {
+        gameState = 'gameover';
+        if (gameLoop) {
+          cancelAnimationFrame(gameLoop);
+          gameLoop = null;
+        }
+        
+        finalScoreEl.textContent = score;
+        finalHighScoreEl.textContent = highScore;
+        gameOverOverlay.classList.remove('hidden');
+      }
+
+      // Initialize difficulty selection immediately on page load
+      initDifficultySelection();
+      
+      // Initialize game when Start Game button is clicked
+      startBtn.addEventListener('click', function() {
+        initGame();
+      }, { once: true });
+    })();
   </script>
 
 </body>
